@@ -12,7 +12,6 @@
             --secondary-dark: #12121B;
             --accent-gold: #D4AF37;
             --accent-gold-light: #F4E4A6;
-            --accent-neon: #FFD166;
             --text-primary: #FFFFFF;
             --text-secondary: #B8B8C7;
             --text-muted: #8A8A9C;
@@ -21,7 +20,6 @@
             --success: #10B981;
             --warning: #F59E0B;
             --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD166 100%);
-            --gradient-dark: linear-gradient(180deg, #0A0A0F 0%, #12121B 100%);
             --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
             --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
             --transition: all 0.3s ease;
@@ -167,9 +165,6 @@
             padding-bottom: 100px;
             position: relative;
             overflow: hidden;
-            display: flex;
-            align-items: center;
-            min-height: 100vh;
         }
 
         .hero-bg {
@@ -183,32 +178,7 @@
         }
 
         .hero-content {
-            max-width: 600px;
-        }
-
-        .hero-image {
-            position: absolute;
-            right: 50px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 500px;
-            height: 500px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: var(--shadow-gold);
-            border: 2px solid var(--accent-gold);
-            z-index: 1;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .hero-image:hover img {
-            transform: scale(1.05);
+            max-width: 700px;
         }
 
         .hero h1 {
@@ -276,6 +246,31 @@
             border-color: var(--accent-gold);
             color: var(--accent-gold);
             transform: translateY(-3px);
+        }
+
+        /* Visual Elements */
+        .visual-element {
+            width: 300px;
+            height: 300px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            position: absolute;
+            right: 100px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .coin-symbol {
+            font-size: 100px;
+            font-weight: bold;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
         }
 
         /* About & Mission Sections */
@@ -398,88 +393,6 @@
         .feature-text {
             color: var(--text-secondary);
             font-size: 1rem;
-        }
-
-        /* Image Gallery Section */
-        .image-gallery {
-            padding: 80px 0;
-        }
-
-        .gallery-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-            color: var(--text-primary);
-        }
-
-        .gallery-title::after {
-            content: '';
-            display: block;
-            width: 100px;
-            height: 4px;
-            background: var(--gradient-gold);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .gallery-item {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            position: relative;
-            height: 300px;
-            box-shadow: var(--shadow-card);
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-10px);
-            border-color: var(--accent-gold);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover img {
-            transform: scale(1.1);
-        }
-
-        .gallery-overlay {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: linear-gradient(to top, rgba(10, 10, 15, 0.9), transparent);
-            padding: 20px;
-            color: var(--text-primary);
-            transform: translateY(100%);
-            transition: var(--transition);
-        }
-
-        .gallery-item:hover .gallery-overlay {
-            transform: translateY(0);
-        }
-
-        .gallery-caption {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--accent-gold);
-            margin-bottom: 5px;
-        }
-
-        .gallery-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
         }
 
         /* Token Information Section */
@@ -685,7 +598,7 @@
             text-decoration: underline;
         }
 
-        /* Footer - Professional Design */
+        /* Footer */
         footer {
             background: var(--primary-dark);
             padding: 80px 0 40px;
@@ -769,69 +682,10 @@
             transform: translateY(-3px);
         }
 
-        /* Professional Badge */
-        .professional-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(212, 175, 55, 0.1);
-            padding: 8px 16px;
-            border-radius: 50px;
-            margin-top: 20px;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-
-        .professional-badge i {
-            color: var(--accent-gold);
-        }
-
-        .professional-badge span {
-            font-size: 0.9rem;
-            color: var(--accent-gold-light);
-            font-weight: 500;
-        }
-
         /* Responsive Styles */
-        @media (max-width: 1200px) {
-            .hero-image {
-                width: 450px;
-                height: 450px;
-                right: 30px;
-            }
-        }
-
-        @media (max-width: 1100px) {
-            .hero-image {
-                width: 400px;
-                height: 400px;
-            }
-            
-            .hero h1 {
-                font-size: 3rem;
-            }
-        }
-
         @media (max-width: 992px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 120px;
-            }
-            
-            .hero-content {
-                max-width: 100%;
-                margin-bottom: 60px;
-            }
-            
-            .hero-image {
-                position: relative;
-                right: auto;
-                top: auto;
-                transform: none;
-                width: 100%;
-                max-width: 500px;
-                height: 400px;
-                margin: 0 auto;
+            .visual-element {
+                display: none;
             }
             
             .hero h1 {
@@ -906,10 +760,6 @@
             section {
                 padding: 70px 0;
             }
-            
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
         }
 
         @media (max-width: 576px) {
@@ -919,10 +769,6 @@
             
             .hero {
                 padding-top: 100px;
-            }
-            
-            .hero-image {
-                height: 300px;
             }
             
             .mission-card, .about-card, .contact-card {
@@ -941,10 +787,6 @@
             .roadmarker {
                 left: 20px;
             }
-            
-            .gallery-item {
-                height: 250px;
-            }
         }
     </style>
 </head>
@@ -962,7 +804,6 @@
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
                     <a href="#mission">Mission</a>
-                    <a href="#gallery">Gallery</a>
                     <a href="#why">Why HNCI</a>
                     <a href="#token">Token Info</a>
                     <a href="#roadmap">Roadmap</a>
@@ -976,7 +817,7 @@
         </div>
     </header>
 
-    <!-- Hero Section with Image -->
+    <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-bg"></div>
         <div class="container">
@@ -994,15 +835,10 @@
                         <i class="fas fa-file-contract"></i> View Contract
                     </a>
                 </div>
-                
-                <div class="professional-badge">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Verified & Secure</span>
-                </div>
             </div>
             
-            <div class="hero-image">
-                <img src="https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="HanuCoin Crypto Concept">
+            <div class="visual-element">
+                <div class="coin-symbol">HNCI</div>
             </div>
         </div>
     </section>
@@ -1029,46 +865,6 @@
                     <p class="section-text">
                         Our mission is to build a trustworthy, community-powered ecosystem where users can grow, learn, and collaborate in a transparent environment.
                     </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Image Gallery Section -->
-    <section class="image-gallery" id="gallery">
-        <div class="container">
-            <h2 class="gallery-title">HanuCoin Ecosystem</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crypto Community">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">Community Driven</div>
-                        <div class="gallery-desc">Our community is at the heart of everything we do</div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blockchain Technology">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">Secure Blockchain</div>
-                        <div class="gallery-desc">Built on Binance Smart Chain for maximum security</div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crypto Growth">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">Sustainable Growth</div>
-                        <div class="gallery-desc">Focus on long-term value and ecosystem development</div>
-                    </div>
-                </div>
-                
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1642104704074-907c0698bfb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crypto Transparency">
-                    <div class="gallery-overlay">
-                        <div class="gallery-caption">Full Transparency</div>
-                        <div class="gallery-desc">Open and verifiable transactions for all members</div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1122,7 +918,7 @@
         </div>
     </section>
 
-    <!-- Token Information Section (Total Supply Removed) -->
+    <!-- Token Information Section -->
     <section class="token-info" id="token">
         <div class="container">
             <h2 class="section-title">Token Information</h2>
@@ -1223,7 +1019,7 @@
         </div>
     </section>
 
-    <!-- Professional Footer -->
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1239,7 +1035,7 @@
                 <div class="footer-bottom">
                     <div class="footer-copyright">
                         <i class="far fa-copyright"></i>
-                        <span>2024 HANUCOIN. All Rights Reserved.</span>
+                        <span id="currentYear">2024</span> HANUCOIN. All Rights Reserved.
                     </div>
                     
                     <div class="footer-social">
@@ -1330,31 +1126,8 @@
             });
         }
         
-        // Fix image loading with fallback URLs
-        function fixImageUrls() {
-            const images = document.querySelectorAll('img');
-            const fallbackImages = [
-                'https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
-                'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                'https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-                'https://images.unsplash.com/photo-1642104704074-907c0698bfb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-            ];
-            
-            images.forEach((img, index) => {
-                // Check if image loaded successfully
-                img.onerror = function() {
-                    if (index < fallbackImages.length) {
-                        this.src = fallbackImages[index];
-                    } else {
-                        this.src = fallbackImages[0];
-                    }
-                };
-            });
-        }
-        
-        // Call image fix function on load
-        window.addEventListener('load', fixImageUrls);
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
         
         // Animate elements on scroll
         const observerOptions = {
@@ -1372,33 +1145,12 @@
         }, observerOptions);
         
         // Observe elements to animate
-        document.querySelectorAll('.mission-card, .about-card, .feature-card, .token-card, .roadmap-phase, .contact-card, .gallery-item').forEach(el => {
+        document.querySelectorAll('.mission-card, .about-card, .feature-card, .token-card, .roadmap-phase, .contact-card').forEach(el => {
             el.style.opacity = '0';
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
             observer.observe(el);
         });
-        
-        // Image hover effects
-        const galleryItems = document.querySelectorAll('.gallery-item');
-        galleryItems.forEach(item => {
-            const img = item.querySelector('img');
-            const overlay = item.querySelector('.gallery-overlay');
-            
-            item.addEventListener('mouseenter', () => {
-                img.style.transform = 'scale(1.1)';
-                overlay.style.transform = 'translateY(0)';
-            });
-            
-            item.addEventListener('mouseleave', () => {
-                img.style.transform = 'scale(1)';
-                overlay.style.transform = 'translateY(100%)';
-            });
-        });
-        
-        // Set current year in footer
-        document.querySelector('.footer-copyright span').textContent = 
-            document.querySelector('.footer-copyright span').textContent.replace('2024', new Date().getFullYear());
     </script>
 </body>
 </html>
