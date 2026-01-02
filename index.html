@@ -1,113 +1,1404 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hanu Coin (HNCI) | Official Website</title>
-  <meta name="description" content="Hanu Coin (HNCI) is a community-driven BEP-20 token on Binance Smart Chain." />
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, Helvetica, sans-serif;
-      background:#0b0b0f;
-      color:#ffffff;
-    }
-    header{
-      padding:40px 20px;
-      text-align:center;
-      background:linear-gradient(135deg,#1a1a2e,#0f3460);
-    }
-    .logo{
-      width:140px;
-      margin:0 auto 20px;
-    }
-    h1{
-      margin:10px 0;
-      font-size:36px;
-    }
-    p{
-      max-width:800px;
-      margin:10px auto;
-      line-height:1.6;
-      color:#dcdcdc;
-    }
-    section{
-      padding:50px 20px;
-      max-width:1000px;
-      margin:auto;
-    }
-    .box{
-      background:#151520;
-      border-radius:12px;
-      padding:25px;
-      margin-bottom:20px;
-      box-shadow:0 0 20px rgba(0,0,0,0.4);
-    }
-    .label{color:#9aa4ff;font-weight:bold;}
-    a{color:#4da6ff;text-decoration:none;}
-    footer{
-      text-align:center;
-      padding:30px 10px;
-      background:#08080c;
-      color:#777;
-      font-size:14px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HANUCOIN (HNCI) - Community-Driven Digital Asset</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #0A0A0F;
+            --secondary-dark: #12121B;
+            --accent-gold: #D4AF37;
+            --accent-gold-light: #F4E4A6;
+            --accent-neon: #FFD166;
+            --text-primary: #FFFFFF;
+            --text-secondary: #B8B8C7;
+            --text-muted: #8A8A9C;
+            --card-bg: #1A1A24;
+            --border-color: #2A2A36;
+            --success: #10B981;
+            --warning: #F59E0B;
+            --gradient-gold: linear-gradient(135deg, #D4AF37 0%, #FFD166 100%);
+            --gradient-dark: linear-gradient(180deg, #0A0A0F 0%, #12121B 100%);
+            --shadow-gold: 0 4px 20px rgba(212, 175, 55, 0.15);
+            --shadow-card: 0 8px 30px rgba(0, 0, 0, 0.25);
+            --transition: all 0.3s ease;
+            --border-radius: 12px;
+            --section-spacing: 100px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--primary-dark);
+            color: var(--text-primary);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.05) 0%, transparent 20%),
+                              radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 20%);
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: var(--section-spacing) 0;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: var(--transition);
+            background-color: rgba(10, 10, 15, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(42, 42, 54, 0.3);
+        }
+
+        header.scrolled {
+            padding: 15px 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--gradient-gold);
+            border-radius: 10px;
+            color: var(--primary-dark);
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .logo-text {
+            font-size: 24px;
+            font-weight: 700;
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-gold);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background: var(--gradient-gold);
+            bottom: -5px;
+            left: 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 150px;
+            padding-bottom: 100px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            z-index: -1;
+        }
+
+        .hero-content {
+            max-width: 600px;
+        }
+
+        .hero-image {
+            position: absolute;
+            right: 50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-gold);
+            border: 2px solid var(--accent-gold);
+            z-index: 1;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, var(--text-primary) 0%, var(--accent-gold) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .hero-intro {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            max-width: 600px;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--gradient-gold);
+            color: var(--primary-dark);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-gold);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--text-primary);
+            border: 2px solid var(--border-color);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--accent-gold);
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        /* About & Mission Sections */
+        .about-mission-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 60px;
+            margin-top: 40px;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-gold);
+            bottom: -10px;
+            left: 0;
+            border-radius: 2px;
+        }
+
+        .section-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .mission-card, .about-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .mission-card:hover, .about-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .mission-icon, .about-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-gold);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            color: var(--primary-dark);
+            font-size: 24px;
+        }
+
+        /* Why Hanucoin Section */
+        .why-hanucoin {
+            background: var(--secondary-dark);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .why-hanucoin::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+            top: -150px;
+            right: -150px;
+            border-radius: 50%;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .feature-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--accent-gold);
+            font-size: 20px;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+
+        .feature-text {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Image Gallery Section */
+        .image-gallery {
+            padding: 80px 0;
+        }
+
+        .gallery-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--text-primary);
+        }
+
+        .gallery-title::after {
+            content: '';
+            display: block;
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-gold);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+            height: 300px;
+            box-shadow: var(--shadow-card);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-gold);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(10, 10, 15, 0.9), transparent);
+            padding: 20px;
+            color: var(--text-primary);
+            transform: translateY(100%);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            transform: translateY(0);
+        }
+
+        .gallery-caption {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent-gold);
+            margin-bottom: 5px;
+        }
+
+        .gallery-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        /* Token Information Section */
+        .token-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+
+        .token-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+
+        .token-card.special {
+            background: linear-gradient(145deg, rgba(26, 26, 36, 0.9) 0%, rgba(42, 42, 54, 0.9) 100%);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .token-card.special::before {
+            content: '';
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+            top: -75px;
+            right: -75px;
+            border-radius: 50%;
+        }
+
+        .token-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .token-label {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .token-value {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        .token-value.contract {
+            font-size: 1rem;
+            font-family: monospace;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+
+        /* Roadmap Section */
+        .roadmap {
+            background: var(--secondary-dark);
+        }
+
+        .roadmap-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 60px auto 0;
+        }
+
+        .roadmap-timeline::before {
+            content: '';
+            position: absolute;
+            width: 4px;
+            height: 100%;
+            background: var(--border-color);
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+        }
+
+        .roadmap-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .roadmap-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+
+        .roadmap-phase {
+            width: 45%;
+            padding: 30px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+
+        .roadmap-phase:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .roadmap-phase h3 {
+            color: var(--accent-gold);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .roadmarker {
+            width: 20px;
+            height: 20px;
+            background: var(--gradient-gold);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 2;
+            border: 4px solid var(--secondary-dark);
+        }
+
+        .roadmap-item ul {
+            list-style-type: none;
+        }
+
+        .roadmap-item li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .roadmap-item li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+            font-weight: bold;
+        }
+
+        /* Community & Contact */
+        .community-contact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .contact-card:hover {
+            border-color: var(--accent-gold);
+            transform: translateY(-5px);
+        }
+
+        .contact-icon {
+            width: 70px;
+            height: 70px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--accent-gold);
+            font-size: 28px;
+        }
+
+        .contact-title {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            color: var(--accent-gold);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: inline-block;
+            margin-top: 10px;
+            transition: var(--transition);
+        }
+
+        .contact-link:hover {
+            color: var(--accent-gold-light);
+            text-decoration: underline;
+        }
+
+        /* Footer - Professional Design */
+        footer {
+            background: var(--primary-dark);
+            padding: 80px 0 40px;
+            border-top: 1px solid var(--border-color);
+            margin-top: 60px;
+            position: relative;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-gold);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 30px;
+            text-decoration: none;
+        }
+
+        .footer-disclaimer {
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            line-height: 1.7;
+            padding: 20px;
+            background: rgba(26, 26, 36, 0.5);
+            border-radius: var(--border-radius);
+            border-left: 3px solid var(--accent-gold);
+        }
+
+        .footer-bottom {
+            width: 100%;
+            padding-top: 30px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-copyright {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-copyright i {
+            color: var(--accent-gold);
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 20px;
+        }
+
+        .footer-social a {
+            color: var(--text-muted);
+            font-size: 18px;
+            transition: var(--transition);
+        }
+
+        .footer-social a:hover {
+            color: var(--accent-gold);
+            transform: translateY(-3px);
+        }
+
+        /* Professional Badge */
+        .professional-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(212, 175, 55, 0.1);
+            padding: 8px 16px;
+            border-radius: 50px;
+            margin-top: 20px;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+
+        .professional-badge i {
+            color: var(--accent-gold);
+        }
+
+        .professional-badge span {
+            font-size: 0.9rem;
+            color: var(--accent-gold-light);
+            font-weight: 500;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 1200px) {
+            .hero-image {
+                width: 450px;
+                height: 450px;
+                right: 30px;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            .hero-image {
+                width: 400px;
+                height: 400px;
+            }
+            
+            .hero h1 {
+                font-size: 3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+                padding-top: 120px;
+            }
+            
+            .hero-content {
+                max-width: 100%;
+                margin-bottom: 60px;
+            }
+            
+            .hero-image {
+                position: relative;
+                right: auto;
+                top: auto;
+                transform: none;
+                width: 100%;
+                max-width: 500px;
+                height: 400px;
+                margin: 0 auto;
+            }
+            
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.3rem;
+            }
+            
+            .about-mission-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .roadmap-timeline::before {
+                left: 30px;
+            }
+            
+            .roadmap-item, .roadmap-item:nth-child(odd) {
+                flex-direction: row;
+            }
+            
+            .roadmap-phase {
+                width: calc(100% - 80px);
+                margin-left: 80px;
+            }
+            
+            .roadmarker {
+                left: 30px;
+                transform: translateX(0);
+            }
+            
+            .footer-bottom {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .hero-cta {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+            
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                padding: 0 15px;
+            }
+            
+            .hero {
+                padding-top: 100px;
+            }
+            
+            .hero-image {
+                height: 300px;
+            }
+            
+            .mission-card, .about-card, .contact-card {
+                padding: 25px;
+            }
+            
+            .token-card {
+                padding: 20px;
+            }
+            
+            .roadmap-phase {
+                padding: 20px;
+                margin-left: 60px;
+            }
+            
+            .roadmarker {
+                left: 20px;
+            }
+            
+            .gallery-item {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 <body>
+    <!-- Header & Navigation -->
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#home" class="logo">
+                <div class="logo-icon">H</div>
+                <div class="logo-text">HANUCOIN</div>
+            </a>
+            
+            <nav>
+                <div class="nav-links" id="navLinks">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#mission">Mission</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#why">Why HNCI</a>
+                    <a href="#token">Token Info</a>
+                    <a href="#roadmap">Roadmap</a>
+                    <a href="#community">Community</a>
+                </div>
+            </nav>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-<header>
-  <!-- INLINE SVG LOGO -->
-  <div class="logo">
-    <svg viewBox="0 0 200 200" width="100%" xmlns="http://www.w3.org/2000/svg">
-      <circle cx="100" cy="100" r="95" fill="#f5c542" stroke="#000" stroke-width="6" />
-      <circle cx="100" cy="100" r="75" fill="#1a1a2e" />
-      <text x="100" y="118" text-anchor="middle" font-size="60" fill="#f5c542" font-weight="bold">H</text>
-      <text x="100" y="160" text-anchor="middle" font-size="20" fill="#ffffff">HNCI</text>
-    </svg>
-  </div>
+    <!-- Hero Section with Image -->
+    <section class="hero" id="home">
+        <div class="hero-bg"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>HANUCOIN (HNCI)</h1>
+                <div class="hero-subtitle">A Community-Driven Digital Asset Built on Binance Smart Chain</div>
+                <p class="hero-intro">
+                    HanuCoin is a decentralized community-focused project designed to promote transparency, participation, and long-term growth.
+                </p>
+                <div class="hero-cta">
+                    <a href="#community" class="btn btn-primary">
+                        <i class="fas fa-users"></i> Join Community
+                    </a>
+                    <a href="#token" class="btn btn-secondary">
+                        <i class="fas fa-file-contract"></i> View Contract
+                    </a>
+                </div>
+                
+                <div class="professional-badge">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Verified & Secure</span>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="HanuCoin Crypto Concept">
+            </div>
+        </div>
+    </section>
 
-  <h1>Hanu Coin (HNCI)</h1>
-  <p>Community‑Driven BEP‑20 Token on Binance Smart Chain</p>
-</header>
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About HanuCoin</h2>
+            <div class="about-mission-grid">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <p class="section-text">
+                        HanuCoin is a decentralized digital token created to support a transparent and community-driven ecosystem. The project focuses on simplicity, trust, and sustainable growth.
+                    </p>
+                </div>
 
-<section>
-  <div class="box">
-    <h2>About Hanu Coin</h2>
-    <p>
-      Hanu Coin (HNCI) is a decentralized and community-focused cryptocurrency built on the Binance Smart Chain.
-      The project is designed for transparency, simplicity, and long-term growth.
-    </p>
-  </div>
+                <!-- Mission Section -->
+                <div class="mission-card" id="mission">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <p class="section-text">
+                        Our mission is to build a trustworthy, community-powered ecosystem where users can grow, learn, and collaborate in a transparent environment.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="box">
-    <h2>Token Information</h2>
-    <p><span class="label">Token Name:</span> Hanu Coin</p>
-    <p><span class="label">Symbol:</span> HNCI</p>
-    <p><span class="label">Network:</span> Binance Smart Chain (BEP-20)</p>
-    <p><span class="label">Contract Address:</span><br>
-      0xC5C35ca0c67D7Df9A1B4318C7317B93BBab441Ac
-    </p>
-  </div>
+    <!-- Image Gallery Section -->
+    <section class="image-gallery" id="gallery">
+        <div class="container">
+            <h2 class="gallery-title">HanuCoin Ecosystem</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crypto Community">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Community Driven</div>
+                        <div class="gallery-desc">Our community is at the heart of everything we do</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blockchain Technology">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Secure Blockchain</div>
+                        <div class="gallery-desc">Built on Binance Smart Chain for maximum security</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crypto Growth">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Sustainable Growth</div>
+                        <div class="gallery-desc">Focus on long-term value and ecosystem development</div>
+                    </div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1642104704074-907c0698bfb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Crypto Transparency">
+                    <div class="gallery-overlay">
+                        <div class="gallery-caption">Full Transparency</div>
+                        <div class="gallery-desc">Open and verifiable transactions for all members</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="box">
-    <h2>Mission</h2>
-    <p>
-      Our mission is to build a strong and trusted community token that is easy to use,
-      secure, and accessible for everyone in the crypto ecosystem.
-    </p>
-  </div>
+    <!-- Why HanuCoin Section -->
+    <section class="why-hanucoin" id="why">
+        <div class="container">
+            <h2 class="section-title">Why Choose HanuCoin</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Community-focused development</h3>
+                    <p class="feature-text">Our community drives decisions and project direction through transparent voting and feedback mechanisms.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="feature-title">Transparent structure</h3>
+                    <p class="feature-text">All transactions and project developments are open for community verification and audit.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="feature-title">Long-term vision</h3>
+                    <p class="feature-text">Focused on sustainable growth and utility rather than short-term hype and speculation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Simple and secure design</h3>
+                    <p class="feature-text">Built on Binance Smart Chain with security and user-friendliness as core principles.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="feature-title">No false promises</h3>
+                    <p class="feature-text">We believe in realistic goals and transparent communication with our community.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <div class="box">
-    <h2>Official Links</h2>
-    <p><span class="label">Website:</span> https://hanucoin.github.io</p>
-    <p><span class="label">Telegram:</span> <a href="https://t.me/HanuCoinOfficial" target="_blank">https://t.me/HanuCoinOfficial</a></p>
-  </div>
-</section>
+    <!-- Token Information Section (Total Supply Removed) -->
+    <section class="token-info" id="token">
+        <div class="container">
+            <h2 class="section-title">Token Information</h2>
+            <div class="token-cards">
+                <div class="token-card">
+                    <div class="token-label">Token Name</div>
+                    <div class="token-value">HANUCOIN</div>
+                </div>
+                
+                <div class="token-card">
+                    <div class="token-label">Symbol</div>
+                    <div class="token-value">HNCI</div>
+                </div>
+                
+                <div class="token-card">
+                    <div class="token-label">Network</div>
+                    <div class="token-value">Binance Smart Chain (BSC)</div>
+                </div>
+                
+                <div class="token-card special">
+                    <div class="token-label">Contract Address</div>
+                    <div class="token-value contract">0xC5C35ca0c67D7Df9A1B4318C7317B93BBab441Ac</div>
+                    <div style="margin-top: 10px; font-size: 0.9rem; color: var(--accent-gold);">
+                        <i class="fas fa-clipboard"></i> Click to copy
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer>
-  © 2026 Hanu Coin (HNCI). All Rights Reserved.
-</footer>
+    <!-- Roadmap Section -->
+    <section class="roadmap" id="roadmap">
+        <div class="container">
+            <h2 class="section-title">Project Roadmap</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <div class="roadmarker"></div>
+                    <div class="roadmap-phase">
+                        <h3>Phase 1 – Launch</h3>
+                        <ul>
+                            <li>Token deployment</li>
+                            <li>Website launch</li>
+                            <li>Community setup</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="roadmap-item">
+                    <div class="roadmarker"></div>
+                    <div class="roadmap-phase">
+                        <h3>Phase 2 – Community Growth</h3>
+                        <ul>
+                            <li>Engagement activities</li>
+                            <li>Awareness campaigns</li>
+                            <li>Feedback & improvement</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="roadmap-item">
+                    <div class="roadmarker"></div>
+                    <div class="roadmap-phase">
+                        <h3>Phase 3 – Utility & Expansion</h3>
+                        <ul>
+                            <li>Utility integration</li>
+                            <li>Ecosystem development</li>
+                            <li>Long-term sustainability</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- Community & Contact Section -->
+    <section class="community" id="community">
+        <div class="container">
+            <h2 class="section-title">Community & Contact</h2>
+            <div class="community-contact">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-title">Email Us</h3>
+                    <p>Have questions or need support? Reach out to our team.</p>
+                    <a href="mailto:Hanucoin.org@gmail.com" class="contact-link">Hanucoin.org@gmail.com</a>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-telegram"></i>
+                    </div>
+                    <h3 class="contact-title">Telegram Community</h3>
+                    <p>Join our official Telegram group to connect with the community.</p>
+                    <a href="https://t.me/HanuCoinOfficial" target="_blank" class="contact-link">@HanuCoinOfficial</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="#home" class="footer-logo">
+                    <div class="logo-icon">H</div>
+                    <div class="logo-text">HANUCOIN</div>
+                </a>
+                
+                <p class="footer-disclaimer">
+                    HanuCoin is a community-driven project and does not offer financial advice. Always do your own research. Cryptocurrency investments are subject to market risks. The value of investments can go up or down.
+                </p>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <i class="far fa-copyright"></i>
+                        <span>2024 HANUCOIN. All Rights Reserved.</span>
+                    </div>
+                    
+                    <div class="footer-social">
+                        <a href="https://t.me/HanuCoinOfficial" target="_blank" title="Telegram">
+                            <i class="fab fa-telegram"></i>
+                        </a>
+                        <a href="mailto:Hanucoin.org@gmail.com" title="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="#home" title="Website">
+                            <i class="fas fa-globe"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.right = '0';
+                navLinks.style.backgroundColor = 'var(--primary-dark)';
+                navLinks.style.padding = '20px';
+                navLinks.style.borderRadius = 'var(--border-radius)';
+                navLinks.style.boxShadow = 'var(--shadow-card)';
+                navLinks.style.border = '1px solid var(--border-color)';
+                navLinks.style.width = '200px';
+                navLinks.style.gap = '15px';
+            }
+        });
+        
+        // Header scroll effect
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    // Close mobile menu if open
+                    if (window.innerWidth <= 768) {
+                        navLinks.style.display = 'none';
+                    }
+                    
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Copy contract address to clipboard
+        const contractElement = document.querySelector('.token-value.contract');
+        if (contractElement) {
+            contractElement.addEventListener('click', function() {
+                const text = this.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    // Show copied message
+                    const originalHTML = this.innerHTML;
+                    this.innerHTML = '<span style="color: var(--success)">Copied to clipboard! ✓</span>';
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalHTML;
+                    }, 2000);
+                });
+            });
+        }
+        
+        // Fix image loading with fallback URLs
+        function fixImageUrls() {
+            const images = document.querySelectorAll('img');
+            const fallbackImages = [
+                'https://images.unsplash.com/photo-1620336655055-bd87c5d1d73f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80',
+                'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1621761191319-c6fb62004040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+                'https://images.unsplash.com/photo-1642104704074-907c0698bfb9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            ];
+            
+            images.forEach((img, index) => {
+                // Check if image loaded successfully
+                img.onerror = function() {
+                    if (index < fallbackImages.length) {
+                        this.src = fallbackImages[index];
+                    } else {
+                        this.src = fallbackImages[0];
+                    }
+                };
+            });
+        }
+        
+        // Call image fix function on load
+        window.addEventListener('load', fixImageUrls);
+        
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements to animate
+        document.querySelectorAll('.mission-card, .about-card, .feature-card, .token-card, .roadmap-phase, .contact-card, .gallery-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            observer.observe(el);
+        });
+        
+        // Image hover effects
+        const galleryItems = document.querySelectorAll('.gallery-item');
+        galleryItems.forEach(item => {
+            const img = item.querySelector('img');
+            const overlay = item.querySelector('.gallery-overlay');
+            
+            item.addEventListener('mouseenter', () => {
+                img.style.transform = 'scale(1.1)';
+                overlay.style.transform = 'translateY(0)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                img.style.transform = 'scale(1)';
+                overlay.style.transform = 'translateY(100%)';
+            });
+        });
+        
+        // Set current year in footer
+        document.querySelector('.footer-copyright span').textContent = 
+            document.querySelector('.footer-copyright span').textContent.replace('2024', new Date().getFullYear());
+    </script>
 </body>
 </html>
