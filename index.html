@@ -12,6 +12,7 @@
             --secondary-dark: #12121B;
             --accent-gold: #D4AF37;
             --accent-gold-light: #F4E4A6;
+            --accent-neon: #FFD166;
             --text-primary: #FFFFFF;
             --text-secondary: #B8B8C7;
             --text-muted: #8A8A9C;
@@ -246,31 +247,6 @@
             border-color: var(--accent-gold);
             color: var(--accent-gold);
             transform: translateY(-3px);
-        }
-
-        /* Visual Elements */
-        .visual-element {
-            width: 300px;
-            height: 300px;
-            background: rgba(212, 175, 55, 0.1);
-            border-radius: 50%;
-            position: absolute;
-            right: 100px;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid var(--accent-gold);
-        }
-
-        .coin-symbol {
-            font-size: 100px;
-            font-weight: bold;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
         }
 
         /* About & Mission Sections */
@@ -684,10 +660,6 @@
 
         /* Responsive Styles */
         @media (max-width: 992px) {
-            .visual-element {
-                display: none;
-            }
-            
             .hero h1 {
                 font-size: 2.8rem;
             }
@@ -835,10 +807,6 @@
                         <i class="fas fa-file-contract"></i> View Contract
                     </a>
                 </div>
-            </div>
-            
-            <div class="visual-element">
-                <div class="coin-symbol">HNCI</div>
             </div>
         </div>
     </section>
