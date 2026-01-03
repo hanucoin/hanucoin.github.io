@@ -28,16 +28,8 @@
             --section-spacing: 100px;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--primary-dark);
@@ -48,372 +40,71 @@
                               radial-gradient(circle at 80% 70%, rgba(212, 175, 55, 0.03) 0%, transparent 20%);
         }
 
-        h1, h2, h3, h4, h5, h6 {
-            font-family: 'Space Grotesk', sans-serif;
-            font-weight: 600;
-            line-height: 1.2;
-        }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; font-weight: 600; line-height: 1.2; }
+        .container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        section { padding: var(--section-spacing) 0; }
 
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+        header { position: fixed; top: 0; width: 100%; z-index: 1000; padding: 20px 0; transition: var(--transition); background-color: rgba(10, 10, 15, 0.95); backdrop-filter: blur(10px); border-bottom: 1px solid rgba(42, 42, 54, 0.3); }
+        header.scrolled { padding: 15px 0; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2); }
+        .nav-container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        .logo-img { width: 40px; height: 40px; object-fit: contain; }
+        .logo-text { font-size: 24px; font-weight: 700; background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-links { display: flex; gap: 30px; }
+        .nav-links a { color: var(--text-primary); text-decoration: none; font-weight: 500; font-size: 16px; transition: var(--transition); position: relative; }
+        .nav-links a:hover { color: var(--accent-gold); }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 24px; cursor: pointer; }
 
-        section {
-            padding: var(--section-spacing) 0;
-        }
+        /* Hero Styling */
+        .hero { padding-top: 150px; padding-bottom: 100px; position: relative; overflow: hidden; }
+        .hero-bg { position: absolute; top: 0; right: 0; width: 50%; height: 100%; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%); z-index: -1; }
+        .hero-content { max-width: 600px; position: relative; z-index: 2; }
+        .hero h1 { font-size: 3.5rem; margin-bottom: 15px; background: linear-gradient(to right, var(--text-primary) 0%, var(--accent-gold) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .hero-subtitle { font-size: 1.5rem; color: var(--accent-gold); margin-bottom: 20px; font-weight: 500; }
+        .hero-intro { font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 40px; line-height: 1.8; }
+        .hero-cta { display: flex; gap: 20px; flex-wrap: wrap; }
+        
+        /* Large Coin Styles */
+        .hanu-logo-main { position: absolute; right: 50px; top: 50%; transform: translateY(-50%); width: 450px; height: 450px; display: flex; align-items: center; justify-content: center; z-index: 1; }
+        .logo-container { text-align: center; animation: float 4s ease-in-out infinite; }
+        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-20px); } }
+        .coin-logo-img { width: 420px; height: auto; filter: drop-shadow(0 0 30px rgba(212, 175, 55, 0.6)); }
+        .logo-text-container { background: rgba(26, 26, 36, 0.8); padding: 15px 30px; border-radius: 20px; border: 2px solid var(--accent-gold); backdrop-filter: blur(10px); margin-top: -20px; }
+        .logo-hnci { font-size: 42px; font-weight: 800; line-height: 1; }
+        .logo-h { background: var(--gradient-gold); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .logo-nci { color: var(--accent-gold-light); }
 
-        /* Header & Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            padding: 20px 0;
-            transition: var(--transition);
-            background-color: rgba(10, 10, 15, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(42, 42, 54, 0.3);
-        }
+        .btn { padding: 15px 30px; border-radius: var(--border-radius); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 10px; transition: var(--transition); border: none; }
+        .btn-primary { background: var(--gradient-gold); color: var(--primary-dark); }
+        .btn-secondary { background: transparent; color: var(--text-primary); border: 2px solid var(--border-color); }
 
-        header.scrolled {
-            padding: 15px 0;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-        }
+        /* Card Styles for all sections */
+        .features-grid, .about-mission-grid, .token-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 40px; }
+        .feature-card, .about-card, .mission-card, .token-card, .contact-card { background: var(--card-bg); border-radius: var(--border-radius); padding: 30px; border: 1px solid var(--border-color); transition: var(--transition); }
+        .feature-card:hover, .about-card:hover, .token-card:hover { border-color: var(--accent-gold); transform: translateY(-5px); }
+        .section-title { font-size: 2.5rem; margin-bottom: 20px; position: relative; display: inline-block; }
+        .section-title::after { content: ''; position: absolute; width: 60px; height: 4px; background: var(--gradient-gold); bottom: -10px; left: 0; }
 
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+        /* Roadmap Timeline */
+        .roadmap-timeline { position: relative; max-width: 800px; margin: 60px auto 0; }
+        .roadmap-timeline::before { content: ''; position: absolute; width: 4px; height: 100%; background: var(--border-color); left: 50%; transform: translateX(-50%); }
+        .roadmap-item { display: flex; align-items: center; margin-bottom: 40px; position: relative; }
+        .roadmap-item:nth-child(odd) { flex-direction: row-reverse; }
+        .roadmap-phase { width: 45%; padding: 25px; background: var(--card-bg); border-radius: var(--border-radius); border: 1px solid var(--border-color); }
+        .roadmarker { width: 20px; height: 20px; background: var(--gradient-gold); border-radius: 50%; position: absolute; left: 50%; transform: translateX(-50%); z-index: 2; border: 4px solid var(--secondary-dark); }
 
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-        }
+        footer { background: var(--primary-dark); padding: 60px 0 30px; border-top: 1px solid var(--border-color); text-align: center; margin-top: 60px; }
 
-        .logo-img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 1px solid var(--accent-gold);
-        }
-
-        .logo-text {
-            font-size: 24px;
-            font-weight: 700;
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 30px;
-        }
-
-        .nav-links a {
-            color: var(--text-primary);
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 16px;
-            transition: var(--transition);
-            position: relative;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent-gold);
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-primary);
-            font-size: 24px;
-            cursor: pointer;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding-top: 150px;
-            padding-bottom: 100px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero-bg {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 50%;
-            height: 100%;
-            background: radial-gradient(circle at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
-            z-index: -1;
-        }
-
-        .hero-content {
-            max-width: 600px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 15px;
-            background: linear-gradient(to right, var(--text-primary) 0%, var(--accent-gold) 100%);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
-
-        .hero-subtitle {
-            font-size: 1.5rem;
-            color: var(--accent-gold);
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .hero-intro {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 40px;
-            max-width: 600px;
-            line-height: 1.8;
-        }
-
-        .hero-cta {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-
-        .btn {
-            padding: 15px 30px;
-            border-radius: var(--border-radius);
-            font-weight: 600;
-            font-size: 16px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: var(--transition);
-            cursor: pointer;
-            border: none;
-        }
-
-        .btn-primary {
-            background: var(--gradient-gold);
-            color: var(--primary-dark);
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: var(--shadow-gold);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 2px solid var(--border-color);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent-gold);
-            color: var(--accent-gold);
-            transform: translateY(-3px);
-        }
-
-        /* HanuCoin Logo - Desktop & Mobile */
-        .hanu-logo-main {
-            position: absolute;
-            right: 100px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 400px;
-            height: 400px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            z-index: 1;
-        }
-
-        .logo-container {
-            text-align: center;
-            animation: float 4s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-15px); }
-        }
-
-        .coin-logo-img {
-            width: 250px;
-            height: auto;
-            margin: 0 auto 25px;
-            filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.4));
-            transition: var(--transition);
-        }
-
-        .coin-logo-img:hover {
-            transform: scale(1.05) rotate(5deg);
-        }
-
-        .logo-text-container {
-            background: rgba(26, 26, 36, 0.8);
-            padding: 15px 25px;
-            border-radius: 20px;
-            border: 2px solid var(--accent-gold);
-            backdrop-filter: blur(10px);
-        }
-
-        .logo-hnci {
-            font-family: 'Space Grotesk', sans-serif;
-            font-size: 42px;
-            font-weight: 800;
-            line-height: 1;
-        }
-
-        .logo-h {
-            background: var(--gradient-gold);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
-        }
-
-        .logo-nci {
-            color: var(--accent-gold-light);
-        }
-
-        /* Mobile Logo (Show on mobile only) */
-        .mobile-logo {
-            display: none;
-            text-align: center;
-            margin: 40px auto 0;
-            max-width: 300px;
-        }
-
-        .mobile-coin-img {
-            width: 150px;
-            height: auto;
-            margin: 0 auto 15px;
-            animation: float 3s ease-in-out infinite;
-        }
-
-        /* Features & Cards */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-
-        .feature-card, .about-card, .mission-card, .token-card, .contact-card {
-            background: var(--card-bg);
-            border-radius: var(--border-radius);
-            padding: 30px;
-            border: 1px solid var(--border-color);
-            transition: var(--transition);
-        }
-
-        .feature-card:hover, .about-card:hover, .mission-card:hover, .token-card:hover, .contact-card:hover {
-            border-color: var(--accent-gold);
-            transform: translateY(-5px);
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            width: 60px;
-            height: 4px;
-            background: var(--gradient-gold);
-            bottom: -10px;
-            left: 0;
-        }
-
-        /* Token Info */
-        .token-cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 40px;
-        }
-
-        .token-value.contract {
-            font-family: monospace;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px;
-            border-radius: 6px;
-            cursor: pointer;
-            word-break: break-all;
-        }
-
-        /* Roadmap */
-        .roadmap-timeline {
-            position: relative;
-            max-width: 800px;
-            margin: 60px auto 0;
-        }
-
-        .roadmap-timeline::before {
-            content: '';
-            position: absolute;
-            width: 4px;
-            height: 100%;
-            background: var(--border-color);
-            left: 50%;
-            transform: translateX(-50%);
-        }
-
-        .roadmap-item {
-            margin-bottom: 40px;
-            width: 45%;
-        }
-
-        .roadmap-phase {
-            padding: 20px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--primary-dark);
-            padding: 60px 0 30px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        /* Responsive Styles */
         @media (max-width: 992px) {
             .hanu-logo-main { display: none; }
-            .mobile-logo { display: block; }
+            .mobile-logo { display: block; text-align: center; margin-top: 30px; }
+            .mobile-coin-img { width: 200px; filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.5)); animation: float 3s ease-in-out infinite; }
             .hero { text-align: center; }
             .hero-cta { justify-content: center; }
             .roadmap-timeline::before { left: 20px; }
-            .roadmap-item { width: 100%; margin-left: 50px; }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links { display: none; }
-            .mobile-menu-btn { display: block; }
-            .hero h1 { font-size: 2.5rem; }
+            .roadmap-item, .roadmap-item:nth-child(odd) { flex-direction: row; }
+            .roadmap-phase { width: calc(100% - 60px); margin-left: 60px; }
+            .roadmarker { left: 20px; transform: none; }
         }
     </style>
 </head>
@@ -421,59 +112,41 @@
     <header id="header">
         <div class="container nav-container">
             <a href="#home" class="logo">
-                <img src="hanucoin.jpg" alt="Logo" class="logo-img">
+                <img src="hanucoin.png" alt="Logo" class="logo-img">
                 <div class="logo-text">HANUCOIN</div>
             </a>
-            
             <nav>
                 <div class="nav-links" id="navLinks">
                     <a href="#home">Home</a>
                     <a href="#about">About</a>
-                    <a href="#mission">Mission</a>
                     <a href="#why">Why HNCI</a>
                     <a href="#token">Token Info</a>
                     <a href="#roadmap">Roadmap</a>
                     <a href="#community">Community</a>
                 </div>
             </nav>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
         </div>
     </header>
 
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
         <div class="container">
             <div class="hero-content">
                 <h1>HANUCOIN (HNCI)</h1>
                 <div class="hero-subtitle">A Community-Driven Digital Asset Built on Binance Smart Chain</div>
-                <p class="hero-intro">
-                    HanuCoin is a decentralized community-focused project designed to promote transparency, participation, and long-term growth.
-                </p>
+                <p class="hero-intro">HanuCoin is a decentralized community-focused project designed to promote transparency, participation, and long-term growth.</p>
                 <div class="hero-cta">
-                    <a href="#community" class="btn btn-primary">
-                        <i class="fas fa-users"></i> Join Community
-                    </a>
-                    <a href="#token" class="btn btn-secondary">
-                        <i class="fas fa-file-contract"></i> View Contract
-                    </a>
+                    <a href="#community" class="btn btn-primary"><i class="fas fa-users"></i> Join Community</a>
+                    <a href="#token" class="btn btn-secondary"><i class="fas fa-file-contract"></i> View Contract</a>
                 </div>
-                
-                <div class="mobile-logo">
-                    <img src="hanucoin.jpg" alt="Hanucoin" class="mobile-coin-img">
-                    <div class="mobile-logo-text">HANUCOIN</div>
+                <div class="mobile-logo" style="display:none;">
+                    <img src="hanucoin.png" alt="Hanucoin" class="mobile-coin-img">
                 </div>
             </div>
-            
             <div class="hanu-logo-main">
                 <div class="logo-container">
-                    <img src="hanucoin.jpg" alt="Hanucoin Logo" class="coin-logo-img">
+                    <img src="hanucoin.png" alt="Hanucoin Logo" class="coin-logo-img">
                     <div class="logo-text-container">
-                        <div class="logo-hnci">
-                            <span class="logo-h">H</span><span class="logo-nci">NCI</span>
-                        </div>
+                        <div class="logo-hnci"><span class="logo-h">H</span><span class="logo-nci">NCI</span></div>
                         <div class="logo-tagline">Community Coin</div>
                     </div>
                 </div>
@@ -481,56 +154,82 @@
         </div>
     </section>
 
-    <section class="token-info" id="token">
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About & Mission</h2>
+            <div class="about-mission-grid">
+                <div class="about-card">
+                    <h3>About HanuCoin</h3>
+                    <p>HanuCoin is a decentralized digital token created to support a transparent ecosystem focused on simplicity and trust.</p>
+                </div>
+                <div class="mission-card">
+                    <h3>Our Mission</h3>
+                    <p>Building a trustworthy, community-powered ecosystem where users grow in a transparent environment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why" style="background: var(--secondary-dark);">
+        <div class="container">
+            <h2 class="section-title">Why Choose HanuCoin</h2>
+            <div class="features-grid">
+                <div class="feature-card"><h4>Community-focused</h4><p>Decisions are driven by transparency and community feedback.</p></div>
+                <div class="feature-card"><h4>Transparent</h4><p>All transactions are open for community verification.</p></div>
+                <div class="feature-card"><h4>Secure</h4><p>Built on Binance Smart Chain with safety as a core principle.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="token">
         <div class="container">
             <h2 class="section-title">Token Information</h2>
             <div class="token-cards">
+                <div class="token-card"><p>Symbol</p><h3>HNCI</h3></div>
+                <div class="token-card"><p>Network</p><h3>BSC</h3></div>
                 <div class="token-card">
-                    <p style="color:var(--text-muted)">Token Name</p>
-                    <h3>HANUCOIN</h3>
+                    <p>Contract Address</p>
+                    <div class="token-value contract" id="copyText">0xC5C35ca0c67D7Df9A1B4318C7317B93BBab441Ac</div>
                 </div>
-                <div class="token-card">
-                    <p style="color:var(--text-muted)">Symbol</p>
-                    <h3>HNCI</h3>
-                </div>
-                <div class="token-card">
-                    <p style="color:var(--text-muted)">Network</p>
-                    <h3>Binance Smart Chain</h3>
-                </div>
-                <div class="token-card">
-                    <p style="color:var(--text-muted)">Contract Address</p>
-                    <div class="token-value contract">0xC5C35ca0c67D7Df9A1B4318C7317B93BBab441Ac</div>
-                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap">
+        <div class="container">
+            <h2 class="section-title">Roadmap</h2>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item"><div class="roadmarker"></div><div class="roadmap-phase"><h3>Phase 1</h3><p>Launch & Community Setup</p></div></div>
+                <div class="roadmap-item"><div class="roadmarker"></div><div class="roadmap-phase"><h3>Phase 2</h3><p>Awareness & Growth</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community">
+        <div class="container">
+            <h2 class="section-title">Community</h2>
+            <div class="about-mission-grid">
+                <div class="contact-card"><h3>Telegram</h3><a href="https://t.me/HanuCoinOfficial" class="btn-primary btn" style="margin-top:10px;">Join Now</a></div>
+                <div class="contact-card"><h3>Email</h3><p>Hanucoin.org@gmail.com</p></div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <img src="hanucoin.jpg" alt="Logo" style="width: 60px; border-radius: 50%; margin-bottom: 20px;">
-            <p class="footer-disclaimer" style="max-width: 700px; margin: 0 auto 20px; color: var(--text-muted); font-size: 0.9rem;">
-                HanuCoin is a community-driven project and does not offer financial advice. Always do your own research.
-            </p>
-            <p>&copy; <span id="currentYear"></span> HANUCOIN. Powered by the lab.</p>
+            <img src="hanucoin.png" alt="Logo" style="width: 50px; margin-bottom:15px;">
+            <p>&copy; 2024 HANUCOIN. Powered by **the lab**.</p>
         </div>
     </footer>
 
     <script>
-        // Set current year
-        document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Mobile Menu Toggle
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-            navLinks.style.flexDirection = 'column';
-        });
-
-        // Copy contract
-        document.querySelector('.contract').addEventListener('click', function() {
+        document.getElementById('copyText').addEventListener('click', function() {
             navigator.clipboard.writeText(this.innerText);
-            alert('Contract Address Copied!');
+            alert('Contract Copied!');
+        });
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
         });
     </script>
 </body>
