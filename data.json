@@ -1,111 +1,15 @@
 {
-  "project": {
-    "name": "HanuCoin",
-    "symbol": "HNCI",
-    "description": "A Community-Driven Digital Asset Built on Binance Smart Chain",
-    "tagline": "HanuCoin is a decentralized community-focused project designed to promote transparency, participation, and long-term growth.",
-    "launchDate": "2024",
-    "website": "https://hanucoin.github.io",
-    "github": "https://github.com/hanucoin/hanucoin.github.io"
-  },
+  "name": "HanuCoin",
+  "symbol": "HNCI",
+  "description": "HanuCoin (HNCI) is a community-driven BEP-20 token built on BNB Smart Chain, focused on transparency, on-chain verification, and long-term ecosystem growth.",
+  "tagline": "A transparent, community-driven BEP-20 token on BNB Smart Chain.",
+  "launchDate": "2024",
+  "website": "https://hanucoin.github.io",
+  "github": "https://github.com/hanuc oin/hanuc oin.github.io",
   "about": {
-    "description": "HanuCoin is a decentralized digital token created to support a transparent and community-driven ecosystem. The project focuses on simplicity, trust, and sustainable growth.",
-    "mission": "Our mission is to build a trustworthy, community-powered ecosystem where users can grow, learn, and collaborate in a transparent environment."
+    "description": "HanuCoin (HNCI) is a decentralized digital asset designed to support a transparent and community-focused Web3 ecosystem. The project emphasizes fair token distribution, locked liquidity, and verifiable on-chain data without any centralized control."
   },
-  "features": [
-    {
-      "id": 1,
-      "title": "Community-focused development",
-      "description": "Our community drives decisions and project direction through transparent voting and feedback mechanisms.",
-      "icon": "users"
-    },
-    {
-      "id": 2,
-      "title": "Transparent structure",
-      "description": "All transactions and project developments are open for community verification and audit.",
-      "icon": "eye"
-    },
-    {
-      "id": 3,
-      "title": "Long-term vision",
-      "description": "Focused on sustainable growth and utility rather than short-term hype and speculation.",
-      "icon": "chart-line"
-    },
-    {
-      "id": 4,
-      "title": "Simple and secure design",
-      "description": "Built on Binance Smart Chain with security and user-friendliness as core principles.",
-      "icon": "shield-alt"
-    },
-    {
-      "id": 5,
-      "title": "No false promises",
-      "description": "We believe in realistic goals and transparent communication with our community.",
-      "icon": "handshake"
-    }
-  ],
-  "token": {
-    "name": "HANUCOIN",
-    "symbol": "HNCI",
-    "network": "Binance Smart Chain (BSC)",
-    "contractAddress": "0xC5C35ca0c67D7Df9A1B4318C7317B93BBab441Ac",
-    "decimals": 18
-  },
-  "roadmap": {
-    "phases": [
-      {
-        "id": 1,
-        "title": "Phase 1 – Launch",
-        "milestones": [
-          "Token deployment",
-          "Website launch",
-          "Community setup"
-        ]
-      },
-      {
-        "id": 2,
-        "title": "Phase 2 – Community Growth",
-        "milestones": [
-          "Engagement activities",
-          "Awareness campaigns",
-          "Feedback & improvement"
-        ]
-      },
-      {
-        "id": 3,
-        "title": "Phase 3 – Utility & Expansion",
-        "milestones": [
-          "Utility integration",
-          "Ecosystem development",
-          "Long-term sustainability"
-        ]
-      }
-    ]
-  },
-  "community": {
-    "email": "Hanucoin.org@gmail.com",
-    "telegram": "https://t.me/HanuCoinOfficial",
-    "socialLinks": [
-      {
-        "platform": "Telegram",
-        "url": "https://t.me/HanuCoinOfficial",
-        "icon": "telegram"
-      },
-      {
-        "platform": "Email",
-        "url": "mailto:Hanucoin.org@gmail.com",
-        "icon": "envelope"
-      }
-    ]
-  },
-  "legal": {
-    "disclaimer": "HanuCoin is a community-driven project and does not offer financial advice. Always do your own research. Cryptocurrency investments are subject to market risks. The value of investments can go up or down.",
-    "copyright": "© 2024 HANUCOIN. All Rights Reserved."
-  },
-  "metadata": {
-    "version": "1.0.0",
-    "lastUpdated": "2024-01-15",
-    "author": "HanuCoin Team",
-    "website": "https://hanucoin.github.io"
-  }
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-18",
+  "author": "HanuCoin Team"
 }
