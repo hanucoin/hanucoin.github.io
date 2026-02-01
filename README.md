@@ -1,6 +1,7 @@
 # HanuCoin (HNCI)
 
 HanuCoin (HNCI) is a community-driven BEP-20 token built on BNB Smart Chain, focused on transparency, on-chain verification, and long-term ecosystem growth.
+This GitHub repository hosts public project resource, documention, and open - source files for transparency purposes
 
 ---
 
@@ -13,10 +14,13 @@ HanuCoin (HNCI) is a community-driven BEP-20 token built on BNB Smart Chain, foc
 ---
 
 ## Official Links
-- Website: https://hanucoin.github.io
+- Website: https://hanucoin.org
 - BscScan: https://bscscan.com/token/0xC5C35ca0c67D7Df9A1B4318C7317B93BBab441Ac
 - X (Twitter): https://x.com/Hanu_Coin
 - Telegram: https://t.me/hanucoin_official
+
+## Contact
+- contact@hanucoin.org
 
 ---
 
